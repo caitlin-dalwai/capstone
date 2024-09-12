@@ -7,7 +7,7 @@ const db = require('./config/db');
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(static('public'))
+app.use(express.static('public'));
 
 app.use('/api/users', userRoutes);
 app.use('/api/bookings', bookingRoutes);
